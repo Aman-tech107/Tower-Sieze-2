@@ -5,14 +5,19 @@ class Ball {
             'density': 0.8,
             'friction': 0.7
         }
+        this.image = loadImage("Sling.png");
         this.body = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
+        image.scale = 0.1;
         World.add(world, this.body);
     }
     display(){
         var pos = this.body.position;
         rectMode(CENTER);
-        rect(pos.x, pos.y, this.width, this.heigth);
+        push();
+        translate(pos.x,  pos.y);
+        image(this.image, 0, 0, this.width, this.height);
+        pop();
     }
 }

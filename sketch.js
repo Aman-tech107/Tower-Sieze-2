@@ -81,7 +81,7 @@ function setup() {
   }
 
   //Ball to shoot
-  ball = new Ball(200,200,35,35);
+  ball = new Ball(200,200,40,40);
   slingshot = new SlingShot(ball.body, {x: 200,y: 200});
   
 }
