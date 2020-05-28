@@ -75,13 +75,13 @@ function setup() {
     //Decreasing Y cordinate after every row
     posY = 20*row;
     positionY = 180-posY;
-    //Increasing X cordinate of the first block of every row
+    //Increasing X cordinate of the first blocgit pk of every row
     InitialPositionX = InitialPositionX + (20);
     //console.log(positionY);
   }
 
   //Ball to shoot
-  ball = new Ball(200,200,40,40);
+  ball = new Ball(200,200,80,80);
   slingshot = new SlingShot(ball.body, {x: 200,y: 200});
   
 }
@@ -139,4 +139,9 @@ function mouseDragged(){
 }
 function mouseReleased(){
   slingshot.fly();
+}
+function keyPressed(){
+  if(keyCode === 32){
+    slingshot.attach(ball.body);
+  }
 }
