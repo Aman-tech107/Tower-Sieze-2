@@ -87,7 +87,7 @@ function setup() {
 }
 
 function draw() {
-  background(255,255,255);  
+  background(150,210,170);  
   Engine.update(engine);
   stand1.display();
   /*box.display();
